@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grey_round_corner_background_half"
+    tools:context=".ui.fragments.SetupCryptoFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".88"
+        android:scaleType="centerCrop"
+        android:src="@drawable/crypto_background" />
+
+    <LinearLayout
+        android:id="@+id/generate_keys_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/white_round_corner_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_round_corner_background_half"
+                android:backgroundTint="@color/pink_dark"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titillium_web"
+                    android:text="Generating keys..."
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titillium_web"
+                    android:text="Successful"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="40sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/baseline_check_circle_outline_24"
+                    app:tint="@android:color/holo_green_dark" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/titillium_web"
+                android:text="In the context of blockchain, a public key serves as an address or identifier to which others can send cryptocurrency or encrypted messages. While it's safe to share your public key, it is computationally infeasible for someone to determine your private key from your public key."
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_generate_keys_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/pink_dark"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Next"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/baseline_login_24"
+                app:iconGravity="textEnd" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/key"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/unlock"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/link"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/view"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/check"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/generate_hash_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/white_round_corner_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_round_corner_background_half"
+                android:backgroundTint="@color/pink_dark"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titillium_web"
+                    android:text="Generating keys..."
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/titillium_web"
+                android:text="Please wait"
+                android:textColor="@color/grey_medium"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/titillium_web"
+                android:text="We are creating a 42 character hexadecimal address value for you..."
+                android:textAlignment="center"
+                android:textColor="@color/pink_dark"
+                android:textSize="20sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/grey_round_corner_background"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/titillium_web"
+                    android:text="Address"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/grey_dark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hexadecimal_value"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/titillium_web"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/copyImg"
+                    app:layout_constraintStart_toEndOf="@+id/view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/copyImg"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/outline_file_copy_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_generate_hash_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/pink_dark"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Next"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/baseline_login_24"
+                app:iconGravity="textEnd" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/key"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/unlock"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/link"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/view"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/check"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/t_c_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/white_round_corner_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_round_corner_background_half"
+                android:backgroundTint="@color/pink_dark"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titillium_web"
+                    android:text="@string/t_c_fro"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_tc_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="If I lose my secret phrase, my funds will be lost forever."
+                app:buttonTint="@color/pink_dark" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_tc_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="If I expose or share my secret phrase to anybody, my funds get stolen."
+                app:buttonTint="@color/pink_dark" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_tc_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="If I expose or share my secret phrase to anybody, my funds can get stolen."
+                app:buttonTint="@color/pink_dark" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_t_c_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/pink_dark"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Next"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/baseline_login_24"
+                app:iconGravity="textEnd" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/key"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/unlock"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/link"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/view"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/check"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/generate_security_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/white_round_corner_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_round_corner_background_half"
+                android:backgroundTint="@color/pink_dark"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titillium_web"
+                    android:text="Generate Secure Phrase"
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/titillium_web"
+                android:letterSpacing=".05"
+                android:text="(Make sure to copy this code as\nthis key will be required for\ntransactions and these can be\ngenerated only once)"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/click_to_generate_phrases_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/grey_round_corner_background"
+                android:backgroundTint="@color/grey_dark"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/titillium_web"
+                    android:letterSpacing=".05"
+                    android:text="Click Here To Generate Phrases"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/pointer_hand_icon"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/titillium_web"
+                android:text="Your Secure phrase acts as\n a key to unlock access to an PRI\naccount and is also the\nultimate recovery tool for your\naccount."
+                android:textAlignment="center"
+                android:textColor="@color/pink_dark_2"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/key"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/unlock"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/link"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/view"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/check"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/t_c_account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/white_round_corner_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_round_corner_background_half"
+                android:backgroundTint="@color/pink_dark"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titillium_web"
+                    android:text="@string/t_c_fro_ac"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_tca_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="12dp"
+                android:text="Agree to map public key with STA hash Address"
+                app:buttonTint="@color/pink_dark" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_tca_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="Agree to map private key with STA trash Address"
+                app:buttonTint="@color/pink_dark" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_t_c_a_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/pink_dark"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Submit"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/baseline_arrow_circle_right_24"
+                app:iconGravity="textEnd" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/key"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/unlock"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/link"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/view"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="33dp"
+                android:layout_height="2dp"
+                android:background="@color/pink_dark" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_pink_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/check"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

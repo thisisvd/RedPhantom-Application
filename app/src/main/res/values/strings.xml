@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RedPhantom Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="t_c_fro"><![CDATA[T&C For Phrase Password]]></string>
+    <string name="t_c_fro_ac"><![CDATA[T&C For Account]]></string>
+    <string name="must_have_special_character_allowed_characters"><![CDATA[Must Have special character (Allowed characters are *,@,#,$,!,~,(,),_,-,+,=,<,>,?,;,:,\',[,],{,},.,)]]></string>
+</resources>
